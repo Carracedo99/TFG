@@ -1,0 +1,254 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://art/samuel-inkilainen-laboratory.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/BotonMaterial.gd" type="Script" id=2]
+[ext_resource path="res://art/go-back-arrow-svgrepo-com.png" type="Texture" id=3]
+[ext_resource path="res://fonts/new_dynamicfont_30.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scripts/Atras.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Actividad8.gd" type="Script" id=6]
+[ext_resource path="res://fonts/ARIAL.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://art/wrong.png" type="Texture" id=8]
+[ext_resource path="res://art/good.png" type="Texture" id=9]
+[ext_resource path="res://scripts/BotonMezclar.gd" type="Script" id=11]
+[ext_resource path="res://buttons/BotonesMezcla.tscn" type="PackedScene" id=13]
+[ext_resource path="res://buttons/BotonesComprobar.tscn" type="PackedScene" id=14]
+[ext_resource path="res://buttons/BotonesReiniciar.tscn" type="PackedScene" id=15]
+[ext_resource path="res://buttons/BotonMaterial.tscn" type="PackedScene" id=16]
+[ext_resource path="res://art/pulsado.png" type="Texture" id=17]
+[ext_resource path="res://art/Black_from_a_camera.jpg" type="Texture" id=18]
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/CONSOLAB.TTF"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 5 )
+
+[node name="Actividad1" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 529.875, 300.1 )
+scale = Vector2( 0.276107, 0.277685 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Atras" type="TextureButton" parent="."]
+margin_left = 32.0
+margin_top = 496.0
+margin_right = 1056.0
+margin_bottom = 1520.0
+rect_scale = Vector2( 0.105, 0.105 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 17 )
+script = ExtResource( 5 )
+reference_path = "res://scenes/MenuPrincipal.tscn"
+
+[node name="Titulo" type="Label" parent="Atras"]
+margin_left = 152.381
+margin_top = 400.0
+margin_right = 296.381
+margin_bottom = 450.0
+rect_scale = Vector2( 4.5, 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "atras"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="FondoMandato" type="Sprite" parent="."]
+position = Vector2( 521.5, 172.625 )
+scale = Vector2( 0.6525, 0.120833 )
+texture = ExtResource( 18 )
+
+[node name="Mandato" type="RichTextLabel" parent="."]
+margin_left = 136.0
+margin_top = 128.0
+margin_right = 904.0
+margin_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "En esta actividad se quiere determinar la cantidad de sulfitos y bisulfitos en una muestra de vino. Usando un vaso de precipitado y el matraz aforado medir con exactitud 50 mL de vino. Verter el vino en el matraz erlenmeyer de 500 mL dejando unos segundos para que todo el vino haya goteado al matraz. Añadir 3 mL de ácido sulfúrico 10% y agitar. Añadir 5 mL de solución de almidón 1% y agitar. Añadir 30 mg (punta de espátula) de EDTA. Homogeneizar la disolución. Enrasar (con cuidado) la bureta con yodo 0,05N. Valorar la solución hasta la aparición de coloración oscura del almidón. Anotar el yodo 0,05N gastado en la valoración. Añadir sobre el mismo matraz, 8 mL de NaOH 4N. Agitar y dejar en contacto 5 minutos. Pasado el tiempo, se añaden 10 mL de ácido sulfúrico 10% y se agita. Valorar desde la bureta con yodo 0,05N hasta aparición de color oscuro. Añadir al mismo matraz 20 mL de  NaOH 4N. Agitar y dejar en contacto 5 minutos. Pasados los 5 minutos diluir con 200 mL de agua destilada y agitar enérgicamente. Añadir 30 mL de ácido sulfúrico 10% y agitar. Valorar desde la bureta con yodo 0,05N hasta aparición de color oscuro. Anotar el yodo 0,05N gastado en la valoración."
+deselect_on_focus_loss_enabled = false
+
+[node name="Ayuda" type="Button" parent="."]
+margin_left = 928.0
+margin_top = 512.0
+margin_right = 1020.0
+margin_bottom = 576.0
+
+[node name="Titulo" type="Label" parent="Ayuda"]
+modulate = Color( 0.956863, 0.956863, 0.956863, 1 )
+margin_left = 13.0
+margin_top = 10.0
+margin_right = 78.0
+margin_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "AYUDA"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Good" type="Sprite" parent="."]
+visible = false
+position = Vector2( 795, 378 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 9 )
+
+[node name="GoodJob" type="Label" parent="Good"]
+margin_left = -141.25
+margin_top = -46.0417
+margin_right = 143.75
+margin_bottom = 3.95831
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Bien Hecho!"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Wrong" type="Sprite" parent="."]
+visible = false
+position = Vector2( 223, 368 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="TryAgain" type="Label" parent="Wrong"]
+margin_left = -152.0
+margin_top = -72.0
+margin_right = 157.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Intentalo de
+Nuevo..."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Actividad" type="Label" parent="."]
+margin_left = 69.0
+margin_top = 50.0
+margin_right = 969.0
+margin_bottom = 100.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "sulfitos y bisulfitos en vino"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 391.0
+margin_top = 150.0
+margin_right = 641.0
+margin_bottom = 591.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BotonMaterial" parent="Menu" instance=ExtResource( 16 )]
+margin_top = 115.0
+margin_right = 250.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 10, 50 )
+script = ExtResource( 2 )
+reference_path = "res://scenes/EscenaMaterial8.tscn"
+start_focused = true
+
+[node name="BotonMezclar" parent="Menu" instance=ExtResource( 13 )]
+visible = false
+margin_top = 155.0
+margin_right = 250.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 10, 50 )
+script = ExtResource( 11 )
+reference_path = "res://scenes/EscenaMezclar2.tscn"
+
+[node name="BotonReiniciar" parent="Menu" instance=ExtResource( 15 )]
+margin_top = 195.0
+margin_right = 250.0
+margin_bottom = 245.0
+rect_min_size = Vector2( 10, 50 )
+flat = false
+
+[node name="BotonComprobar" parent="Menu" instance=ExtResource( 14 )]
+margin_top = 275.0
+margin_right = 250.0
+margin_bottom = 325.0
+rect_min_size = Vector2( 10, 50 )
+flat = false
+
+[node name="Fondo_ayuda" type="Sprite" parent="."]
+visible = false
+position = Vector2( 868, 369.25 )
+scale = Vector2( 0.273333, 0.305 )
+texture = ExtResource( 18 )
+
+[node name="Mandato_ayuda" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 712.0
+margin_top = 241.0
+margin_right = 1024.0
+margin_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "1. Rellenar matraz herlenmeyer con vino
+2. Rellenar pipeta con ácido sulfúrico 10%
+3. Mezclarlo
+4. Rellenar pipeta con solución de almidón 1%
+5. Mezclarlo
+6. Añadir EDTA a la mezcla
+7. Rellenar bureta con yodo 0,05N
+8. Mezclarlo
+9. Rellenar pipeta con NaOH 4N
+10. Mezclarlo
+11. Añadir ácido sulfúrico 10% a la mezcla
+12. Añadir yodo 0,05N a la mezcla
+13. Añadir NaOH 4N a la mezcla
+14. Rellenar probeta con agua destilada
+15. Mezclarlo
+16. Añadir ácido sulfúrico 10% a la mezcla
+17. Añadir yodo 0,05N a la mezcla"
+deselect_on_focus_loss_enabled = false
+
+[node name="Link" type="LinkButton" parent="."]
+visible = false
+margin_left = 712.0
+margin_top = 346.0
+margin_right = 809.0
+margin_bottom = 370.0
+text = "Video de ayuda"
+
+[connection signal="pressed" from="Ayuda" to="." method="_on_Ayuda_pressed"]
+[connection signal="pressed" from="Menu/BotonReiniciar" to="." method="_on_BotonReiniciar_pressed"]
+[connection signal="pressed" from="Menu/BotonComprobar" to="." method="_on_Comprobar_pressed"]
+[connection signal="pressed" from="Link" to="." method="_on_Link_pressed"]

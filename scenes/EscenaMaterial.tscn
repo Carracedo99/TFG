@@ -1,0 +1,687 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://art/go-back-arrow-svgrepo-com.png" type="Texture" id=1]
+[ext_resource path="res://fonts/new_dynamicfont_30.tres" type="DynamicFont" id=2]
+[ext_resource path="res://art/samuel-inkilainen-control-room.jpg" type="Texture" id=3]
+[ext_resource path="res://art/1481082210.jpg" type="Texture" id=4]
+[ext_resource path="res://art/bureta1.jpg" type="Texture" id=5]
+[ext_resource path="res://art/download.jpg" type="Texture" id=6]
+[ext_resource path="res://art/tubo.jpg" type="Texture" id=7]
+[ext_resource path="res://art/34502-simple_background-748x468.png" type="Texture" id=8]
+[ext_resource path="res://art/Platos-de-Petri-de-pl-stico-para-placa-LB-levadura-bacteriana-90x15mm-10-unids-paquete.jpg_.webp" type="Texture" id=9]
+[ext_resource path="res://art/images.jpg" type="Texture" id=10]
+[ext_resource path="res://art/Black_from_a_camera.jpg" type="Texture" id=13]
+[ext_resource path="res://scripts/Atras.gd" type="Script" id=15]
+[ext_resource path="res://art/pulsado.png" type="Texture" id=16]
+[ext_resource path="res://scripts/EscenaMaterial.gd" type="Script" id=17]
+[ext_resource path="res://art/Blue_question_mark_icon.svg.png" type="Texture" id=20]
+[ext_resource path="res://art/148767.png" type="Texture" id=21]
+[ext_resource path="res://buttons/BotonesComprobar.tscn" type="PackedScene" id=22]
+[ext_resource path="res://art/wrong.png" type="Texture" id=24]
+[ext_resource path="res://art/good.png" type="Texture" id=25]
+[ext_resource path="res://fonts/CONSOLAB.TTF" type="DynamicFontData" id=26]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/CONSOLAB.TTF"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+outline_size = 2
+font_data = ExtResource( 26 )
+
+[node name="EscenaMaterial" type="Node2D"]
+script = ExtResource( 17 )
+
+[node name="Background1" type="Sprite" parent="."]
+position = Vector2( 532, 300 )
+scale = Vector2( 0.277083, 0.277778 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background2" type="Sprite" parent="."]
+position = Vector2( 687.499, 304 )
+scale = Vector2( 0.811495, 0.786325 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ventana" type="Control" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = 130.0
+margin_right = 992.0
+margin_bottom = 488.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VasoPrecipitados" type="TextureButton" parent="Ventana"]
+margin_left = 393.0
+margin_top = 178.0
+margin_right = 1060.0
+margin_bottom = 1178.0
+rect_scale = Vector2( 0.12, 0.12 )
+texture_normal = ExtResource( 4 )
+
+[node name="Titulo" type="Label" parent="Ventana/VasoPrecipitados"]
+margin_left = -158.334
+margin_top = 1058.33
+margin_right = 162.666
+margin_bottom = 1161.33
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "vaso de
+precipitados"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Erlenmeyer" type="TextureButton" parent="Ventana"]
+margin_left = 384.0
+margin_top = 6.0
+margin_right = 592.0
+margin_bottom = 248.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Titulo" type="Label" parent="Ventana/Erlenmeyer"]
+margin_left = -80.0
+margin_top = 256.0
+margin_right = 409.0
+margin_bottom = 306.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "matraz erlenmeyer"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="PlacaPetri" type="TextureButton" parent="Ventana"]
+margin_left = 560.0
+margin_top = 6.0
+margin_right = 1360.0
+margin_bottom = 806.0
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Titulo" type="Label" parent="Ventana/PlacaPetri"]
+margin_left = 53.333
+margin_top = 853.334
+margin_right = 333.333
+margin_bottom = 903.334
+rect_scale = Vector2( 2.5, 2.5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "placa petri"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="TuboEnsayo" type="TextureButton" parent="Ventana"]
+margin_left = 558.0
+margin_top = 175.0
+margin_right = 1308.0
+margin_bottom = 925.0
+rect_scale = Vector2( 0.175, 0.175 )
+texture_normal = ExtResource( 7 )
+
+[node name="Titulo" type="Label" parent="Ventana/TuboEnsayo"]
+margin_top = 817.143
+margin_right = 382.0
+margin_bottom = 867.143
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "tubo de ensayo"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="PesaFiltro" type="TextureButton" parent="Ventana"]
+margin_left = 760.0
+margin_top = 6.0
+margin_right = 970.0
+margin_bottom = 245.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+
+[node name="Titulo" type="Label" parent="Ventana/PesaFiltro"]
+margin_left = -64.0
+margin_top = 256.0
+margin_right = 437.0
+margin_bottom = 306.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Pesafiltro con tapa"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Bureta" type="TextureButton" parent="Ventana"]
+margin_left = 725.0
+margin_top = 187.0
+margin_right = 2205.0
+margin_bottom = 1044.0
+rect_scale = Vector2( 0.12, 0.125 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Titulo" type="Label" parent="Ventana/Bureta"]
+margin_left = 75.0005
+margin_top = 1032.0
+margin_right = 457.0
+margin_bottom = 1082.0
+rect_scale = Vector2( 3.2, 3.2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "bureta"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Fondo_ayuda" type="Sprite" parent="Ventana"]
+visible = false
+position = Vector2( 624, 174 )
+scale = Vector2( 0.466667, 0.373333 )
+texture = ExtResource( 13 )
+
+[node name="TituloMezclar" type="Label" parent="Ventana"]
+visible = false
+margin_left = 440.0
+margin_top = 62.0
+margin_right = 1206.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "¿Con que quieres rellenarlo?"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="MaterialMezclar" type="OptionButton" parent="Ventana"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 536.0
+margin_top = 126.0
+margin_right = -200.0
+margin_bottom = -192.0
+rect_pivot_offset = Vector2( -275, 0 )
+text = "Leche"
+items = [ "Leche", null, false, 0, null, "Aceite", null, false, 1, null, "Agua", null, false, 2, null ]
+selected = 0
+
+[node name="Mezclar" type="Button" parent="Ventana"]
+visible = false
+margin_left = 584.0
+margin_top = 198.0
+margin_right = 680.0
+margin_bottom = 238.0
+
+[node name="Titulo" type="Label" parent="Ventana/Mezclar"]
+modulate = Color( 0.956863, 0.956863, 0.956863, 1 )
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 92.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "rellenar"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TituloColocar" type="Label" parent="Ventana"]
+visible = false
+margin_left = 432.0
+margin_top = 62.0
+margin_right = 1199.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "¿Qué quieres colocar encima?"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="MaterialColocar" type="OptionButton" parent="Ventana"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 528.0
+margin_top = 118.0
+margin_right = -208.0
+margin_bottom = -200.0
+rect_pivot_offset = Vector2( -275, 0 )
+text = "Leche"
+items = [ "Leche", null, false, 0, null, "Aceite", null, false, 1, null, "Ácido graso", null, false, 2, null, "Ácido clorhidrico", null, false, 3, null, "Huevo", null, false, 4, null ]
+selected = 0
+
+[node name="Colocar" type="Button" parent="Ventana"]
+visible = false
+margin_left = 576.0
+margin_top = 198.0
+margin_right = 672.0
+margin_bottom = 238.0
+
+[node name="Titulo" type="Label" parent="Ventana/Colocar"]
+modulate = Color( 0.956863, 0.956863, 0.956863, 1 )
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 92.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "colocar"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Resultado" type="Label" parent="Ventana"]
+visible = false
+margin_left = 368.0
+margin_top = 254.0
+margin_right = 1145.0
+margin_bottom = 357.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Obtenido ovoscopio con huevo"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Resultado2" type="Label" parent="Ventana"]
+visible = false
+margin_left = 376.0
+margin_top = 262.0
+margin_right = 1153.0
+margin_bottom = 365.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Obtenido... algo raro"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Raro" type="TextureRect" parent="Ventana"]
+visible = false
+margin_left = 512.0
+margin_top = 46.0
+margin_right = 1312.0
+margin_bottom = 846.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 20 )
+
+[node name="Resultado3" type="Label" parent="Ventana"]
+visible = false
+margin_left = 376.0
+margin_top = 246.0
+margin_right = 1153.0
+margin_bottom = 349.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Material rellenado con exito"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Exito" type="TextureRect" parent="Ventana"]
+visible = false
+margin_left = 536.0
+margin_top = 70.0
+margin_right = 1048.0
+margin_bottom = 582.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 21 )
+
+[node name="TituloPesar" type="Label" parent="Ventana"]
+visible = false
+margin_left = 440.0
+margin_top = 62.0
+margin_right = 1206.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "¿Qué quieres pesar?"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="MaterialPesar" type="OptionButton" parent="Ventana"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 528.0
+margin_top = 118.0
+margin_right = -208.0
+margin_bottom = -200.0
+rect_pivot_offset = Vector2( -275, 0 )
+text = "Pesafiltros"
+items = [ "Pesafiltros", null, false, 0, null ]
+selected = 0
+
+[node name="PesarMin" type="Button" parent="Ventana"]
+visible = false
+margin_left = 576.0
+margin_top = 198.0
+margin_right = 672.0
+margin_bottom = 238.0
+
+[node name="Titulo" type="Label" parent="Ventana/PesarMin"]
+modulate = Color( 0.956863, 0.956863, 0.956863, 1 )
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 92.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "pesar"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TituloCalentar" type="Label" parent="Ventana"]
+visible = false
+margin_left = 440.0
+margin_top = 62.0
+margin_right = 1206.0
+margin_bottom = 112.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "¿Qué quieres calentar?"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="MaterialCalentar" type="OptionButton" parent="Ventana"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 528.0
+margin_top = 118.0
+margin_right = -208.0
+margin_bottom = -200.0
+rect_pivot_offset = Vector2( -275, 0 )
+text = "Matraz con vinagre"
+items = [ "Matraz con vinagre", null, false, 0, null, "Tubo de ensayo con agua", null, false, 1, null ]
+selected = 0
+
+[node name="CalentarMin" type="Button" parent="Ventana"]
+visible = false
+margin_left = 576.0
+margin_top = 198.0
+margin_right = 672.0
+margin_bottom = 238.0
+
+[node name="Titulo" type="Label" parent="Ventana/CalentarMin"]
+modulate = Color( 0.956863, 0.956863, 0.956863, 1 )
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 92.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "calentar"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Resultado4" type="Label" parent="Ventana"]
+visible = false
+margin_left = 376.0
+margin_top = 246.0
+margin_right = 1153.0
+margin_bottom = 349.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Material pesado con exito"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Resultado5" type="Label" parent="Ventana"]
+visible = false
+margin_left = 376.0
+margin_top = 246.0
+margin_right = 1153.0
+margin_bottom = 349.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Material calentado con exito"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Atras" type="TextureButton" parent="."]
+margin_left = 32.0
+margin_top = 496.0
+margin_right = 1056.0
+margin_bottom = 1520.0
+rect_scale = Vector2( 0.105, 0.105 )
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 16 )
+script = ExtResource( 15 )
+reference_path = "res://scenes/Actividad1.tscn"
+
+[node name="Titulo" type="Label" parent="Atras"]
+margin_left = 149.523
+margin_top = 400.0
+margin_right = 293.523
+margin_bottom = 450.0
+rect_scale = Vector2( 4.5, 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "atras"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="TituloMaterial" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 52.0
+margin_right = 972.0
+margin_bottom = 102.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Material"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="BotonComprobar" parent="." instance=ExtResource( 22 )]
+margin_left = 760.0
+margin_top = 528.0
+margin_right = 1010.0
+margin_bottom = 578.0
+rect_min_size = Vector2( 10, 50 )
+rect_scale = Vector2( 0.75, 0.75 )
+flat = false
+
+[node name="Wrong" type="Sprite" parent="BotonComprobar"]
+visible = false
+position = Vector2( 304, 24 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 24 )
+
+[node name="Good" type="Sprite" parent="BotonComprobar"]
+visible = false
+position = Vector2( 306.666, 24.8333 )
+scale = Vector2( 0.23889, 0.22245 )
+texture = ExtResource( 25 )
+
+[node name="Ayuda" type="Button" parent="."]
+margin_left = 104.0
+margin_top = 384.0
+margin_right = 280.0
+margin_bottom = 472.0
+
+[node name="Titulo" type="Label" parent="Ayuda"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = 7.0
+margin_right = 41.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.298039, 0.270588, 0.270588, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 3 )
+text = "NUEVO
+MATERIAL"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pesar" type="Button" parent="."]
+margin_left = 104.0
+margin_top = 128.0
+margin_right = 280.0
+margin_bottom = 216.0
+
+[node name="Titulo" type="Label" parent="Pesar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = -15.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.298039, 0.270588, 0.270588, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 3 )
+text = "PESAR"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Calentar" type="Button" parent="."]
+margin_left = 104.0
+margin_top = 256.0
+margin_right = 280.0
+margin_bottom = 344.0
+
+[node name="Titulo" type="Label" parent="Calentar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = -15.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.298039, 0.270588, 0.270588, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 3 )
+text = "HORNO"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="Ventana/VasoPrecipitados" to="." method="_on_VasoPrecipitados_pressed"]
+[connection signal="pressed" from="Ventana/Erlenmeyer" to="." method="_on_Erlenmeyer_pressed"]
+[connection signal="pressed" from="Ventana/PlacaPetri" to="." method="_on_PlacaPetri_pressed"]
+[connection signal="pressed" from="Ventana/TuboEnsayo" to="." method="_on_TuboEnsayo_pressed"]
+[connection signal="pressed" from="Ventana/PesaFiltro" to="." method="_on_PesaFiltro_pressed"]
+[connection signal="pressed" from="Ventana/Bureta" to="." method="_on_Bureta_pressed"]
+[connection signal="pressed" from="Ventana/Mezclar" to="." method="_on_Mezclar_pressed"]
+[connection signal="pressed" from="Ventana/Colocar" to="." method="_on_Colocar_pressed"]
+[connection signal="pressed" from="Ventana/PesarMin" to="." method="_on_PesarMin_pressed"]
+[connection signal="pressed" from="Ventana/CalentarMin" to="." method="_on_CalentarMin_pressed"]
+[connection signal="pressed" from="BotonComprobar" to="." method="_on_BotonComprobar_pressed"]
+[connection signal="pressed" from="Ayuda" to="." method="_on_Ayuda_pressed"]
+[connection signal="pressed" from="Pesar" to="." method="_on_Pesar_pressed"]
+[connection signal="pressed" from="Calentar" to="." method="_on_Calentar_pressed"]

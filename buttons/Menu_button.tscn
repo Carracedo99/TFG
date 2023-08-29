@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/CONSOLAB.TTF" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 2
+font_data = ExtResource( 1 )
+
+[node name="BotonesMenu" type="Button"]
+margin_top = 54.0
+margin_right = 900.0
+margin_bottom = 74.0
+rect_min_size = Vector2( 360, 50 )
+flat = true
+
+[node name="Titulo" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.298039, 0.270588, 0.270588, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 2 )
+text = "Titulo"
